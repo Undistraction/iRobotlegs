@@ -1,4 +1,7 @@
-# xcode
+### Documents Source - Omnigraffle/Illustrator etc.
+Docs/source/*
+
+### Xcode
 build/*
 *.pbxuser
 !default.pbxuser
@@ -8,11 +11,24 @@ build/*
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+*.xcworkspace
 !default.xcworkspace
 xcuserdata
 profile
 *.moved-aside
+
+### Xcode Backup Files
+# automatic backup files
+*~.nib
 *.swp
-_site
-run
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+### SVN Cruft from imports
+.svn 
+
+### OSX Finder
 *.DS_Store
