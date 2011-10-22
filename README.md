@@ -1,11 +1,14 @@
+<br>
 ####Introduction
 
 **iRobotlegs** is an Objective-C/Cocoa Touch port of the popular [**Robotlegs**]() MVCS Mircro-architecture for Actionscript 3. It aims to stick as closely as possible to the original framework without fighting against Cocoa-Touch. It should be familiar enough for someone who has used the original framework to find their way around easily, but it should be easy to understand for someone familiar with Objective-C but not the original framework. Where **Robotlegs** uses [**SwiftSuspenders**](https://github.com/tschneidereit/SwiftSuspenders) for its dependency injection needs, **iRobotlegs** uses a modified version of the excellent [**Objection**](https://github.com/atomicobject/objection) framework. There is an example project; 'FlickrGalleryBuilderMK2' in the examples folder and I aim to add more examples as time allows.
 
+<br>
 ####Aims and Benefits
 
 The aim of **iRobotlegs** is the same as that of robotlegs; to make application development easier and more consistant accross projects, to encourage clear separtion of the application into Model, View, Controller and Service regions,to encourage and enable loose coupling between these regions through the use of dependency injection and Event/Notification based communication, and to lower the cognitive hit from appraising or maintaining understanding of a growing project through consistancy. As with most similar frameworks it is not always the best answer, and for trivial applications it will be overkill.
 
+<br>
 ####Differences
 
 There are two primary differences between the way the framework is implemented in Cocoa Touch and Actionscript. **Robotlegs** makes heavy use of the 
@@ -19,10 +22,12 @@ This leaves us with two options, both of which are currently supported by **iRob
 
 Objective-C has no support for meta-data or any kind of annotations, so I've echoed Objection's use of macros to allow for a kind of annotation of classes. Effectively the single iRobotlegs Macro wraps one Objection's macros. Whilst this approach isn't ideal, there is no other option available before removing the dependency declarations from the classes altogether and declaring all dependencies in some sort of configuration file. This is something I might look at later on down the line, but for the moment a macro which directly registers chosen properties with Objection is a good-enough solution. Unfortunately Objection does not support  optional dependencies and there is no way I can add it at the present time. However I have spoken to Objection's author; Justin DeWind who is going to look at supporting this functionality in a forthcoming release.
 
+<br>
 ####Basic Usage
 
-For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at []http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. 
+For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at [http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. 
 
+<br>
 ####Roadmap
 
 At this point, the most important thing is to get some feedback from people who are using Cocoa-touch to help shape the Framework, however my primary goals at present are:
@@ -30,15 +35,15 @@ At this point, the most important thing is to get some feedback from people who 
 1. I want to focus on improving the view tier, whether supporting Mediators or using ViewControllers as Mediators. 
 2. Once I feel that the framework is fairly stable I will fully document it. I also plan on moving over to using [Kiwi](http://www.kiwi-lib.info/) for testing.
 
-
+<br>
 ####Author
 
-######Pedr Browne
+Pedr Browne<br>
 <pedr@1ndivisible.com><br>
 [1ndivisible.com](http://1ndivisible.com)<br>
-[github.com/1ndivisible](https://github.com/1ndivisible
-)
+[github.com/1ndivisible](https://github.com/1ndivisible)
 
+<br>
 ####License
 
 The MIT License
