@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iRobotlegs' target in the 'iRobotlegs' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

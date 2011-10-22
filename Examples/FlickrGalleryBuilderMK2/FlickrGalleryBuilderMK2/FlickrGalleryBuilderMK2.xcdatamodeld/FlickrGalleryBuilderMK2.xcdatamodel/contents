@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Galleries" representedClassName="Galleries" syncable="YES">
+        <relationship name="galleries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Gallery" inverseName="galleries" inverseEntity="Gallery" syncable="YES"/>
+    </entity>
+    <entity name="Gallery" representedClassName="Gallery" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="galleries" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Galleries" inverseName="galleries" inverseEntity="Galleries" syncable="YES"/>
+        <relationship name="images" toMany="YES" minCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Image" inverseName="gallery" inverseEntity="Image" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gallery" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Gallery" inverseName="images" inverseEntity="Gallery" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Galleries" positionX="-9063" positionY="-7929" width="128" height="60"/>
+        <element name="Gallery" positionX="-8784" positionY="-7974" width="128" height="90"/>
+        <element name="Image" positionX="-8543" positionY="-7803" width="128" height="120"/>
+    </elements>
+</model>

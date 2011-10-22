@@ -1,0 +1,926 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B015408143A27DA0045A1FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B015407143A27DA0045A1FB /* CoreGraphics.framework */; };
+		0B01540A143A27EA0045A1FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B015409143A27EA0045A1FB /* UIKit.framework */; };
+		0B01543B143A2BDA0045A1FB /* TestSuperclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01542B143A2BB00045A1FB /* TestSuperclass.m */; };
+		0B01543C143A2BDA0045A1FB /* TestSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01542C143A2BB00045A1FB /* TestSubclass.m */; };
+		0B01543D143A2BDA0045A1FB /* TestClassImplementsProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01542D143A2BB00045A1FB /* TestClassImplementsProtocol.m */; };
+		0B01543E143A2BDA0045A1FB /* TestClassUnrelated.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01542E143A2BB00045A1FB /* TestClassUnrelated.m */; };
+		0B01543F143A2BDA0045A1FB /* TestClassUnrelatedOther.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01542F143A2BB00045A1FB /* TestClassUnrelatedOther.m */; };
+		0B015440143A2BF20045A1FB /* IRActorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B015437143A2BCC0045A1FB /* IRActorTests.m */; };
+		0B015441143A2BF20045A1FB /* IRMediatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B015438143A2BCC0045A1FB /* IRMediatorTests.m */; };
+		0B015442143A2BF80045A1FB /* IRObjectionAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B015435143A2BBD0045A1FB /* IRObjectionAdapterTests.m */; };
+		0B015446143A2C2E0045A1FB /* IRCommandMapTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B015443143A2C2E0045A1FB /* IRCommandMapTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B015447143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B015444143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B015448143A2C2E0045A1FB /* IRNotificationMapTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B015445143A2C2E0045A1FB /* IRNotificationMapTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B01544D143A2C440045A1FB /* IRCommandMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B015449143A2C440045A1FB /* IRCommandMapTests.m */; };
+		0B01544E143A2C440045A1FB /* IRMediatorMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01544A143A2C440045A1FB /* IRMediatorMapTests.m */; };
+		0B01544F143A2C440045A1FB /* IRCommandMapTestsWithNotificationType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01544B143A2C440045A1FB /* IRCommandMapTestsWithNotificationType.m */; };
+		0B015450143A2C440045A1FB /* IRNotificationMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01544C143A2C440045A1FB /* IRNotificationMapTests.m */; };
+		0B01545F143A2C8E0045A1FB /* TestMediatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B015459143A2C8E0045A1FB /* TestMediatedObject.m */; };
+		0B015460143A2C8E0045A1FB /* TestMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545A143A2C8E0045A1FB /* TestMediator.m */; };
+		0B015461143A2C8E0045A1FB /* TestCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545B143A2C8E0045A1FB /* TestCommand.m */; };
+		0B015462143A2C8E0045A1FB /* TestNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545C143A2C8E0045A1FB /* TestNotification.m */; };
+		0B015463143A2C8E0045A1FB /* NotificationNameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545D143A2C8E0045A1FB /* NotificationNameConstants.m */; };
+		0B015464143A2C8E0045A1FB /* TestMediatedObjectSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */; };
+		0B8A74C5143A3FEB00F89D29 /* libIRobotlegsSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */; };
+		0B9524311452F8F1000DBB8A /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B95242F1452F8F1000DBB8A /* Objection-iOS.framework */; };
+		0B9524321452F8F1000DBB8A /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */; };
+		0BC6ED1E1451E0EF00EBBBEC /* IRCommandMapProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED071451E0EF00EBBBEC /* IRCommandMapProtocol.h */; };
+		0BC6ED1F1451E0EF00EBBBEC /* IRCommandMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED081451E0EF00EBBBEC /* IRCommandMap.h */; };
+		0BC6ED201451E0EF00EBBBEC /* IRCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED091451E0EF00EBBBEC /* IRCallback.h */; };
+		0BC6ED211451E0EF00EBBBEC /* IRMediatorMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0A1451E0EF00EBBBEC /* IRMediatorMapping.h */; };
+		0BC6ED221451E0EF00EBBBEC /* IRNotificationMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0B1451E0EF00EBBBEC /* IRNotificationMapping.h */; };
+		0BC6ED231451E0EF00EBBBEC /* IRViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0C1451E0EF00EBBBEC /* IRViewController.h */; };
+		0BC6ED241451E0EF00EBBBEC /* IRMediatedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0D1451E0EF00EBBBEC /* IRMediatedViewController.h */; };
+		0BC6ED251451E0EF00EBBBEC /* IRCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0E1451E0EF00EBBBEC /* IRCommand.h */; };
+		0BC6ED261451E0EF00EBBBEC /* IRobotlegs.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED0F1451E0EF00EBBBEC /* IRobotlegs.h */; };
+		0BC6ED271451E0EF00EBBBEC /* IRContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED101451E0EF00EBBBEC /* IRContext.h */; };
+		0BC6ED281451E0EF00EBBBEC /* IRConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED111451E0EF00EBBBEC /* IRConstants.h */; };
+		0BC6ED291451E0EF00EBBBEC /* IRObjectionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED121451E0EF00EBBBEC /* IRObjectionInjector.h */; };
+		0BC6ED2A1451E0EF00EBBBEC /* IRMediatorMapProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED131451E0EF00EBBBEC /* IRMediatorMapProtocol.h */; };
+		0BC6ED2B1451E0EF00EBBBEC /* IRMediatorMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED141451E0EF00EBBBEC /* IRMediatorMap.h */; };
+		0BC6ED2C1451E0EF00EBBBEC /* IRMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED151451E0EF00EBBBEC /* IRMediator.h */; };
+		0BC6ED2D1451E0EF00EBBBEC /* IRCommandProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED161451E0EF00EBBBEC /* IRCommandProtocol.h */; };
+		0BC6ED2E1451E0EF00EBBBEC /* IRMediatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED171451E0EF00EBBBEC /* IRMediatorProtocol.h */; };
+		0BC6ED2F1451E0EF00EBBBEC /* IRInjectorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED181451E0EF00EBBBEC /* IRInjectorProtocol.h */; };
+		0BC6ED301451E0EF00EBBBEC /* IRObjectionInjectorException.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED191451E0EF00EBBBEC /* IRObjectionInjectorException.h */; };
+		0BC6ED311451E0EF00EBBBEC /* IRNotificationMapProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED1A1451E0EF00EBBBEC /* IRNotificationMapProtocol.h */; };
+		0BC6ED321451E0EF00EBBBEC /* IRNotificationMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED1B1451E0EF00EBBBEC /* IRNotificationMap.h */; };
+		0BC6ED331451E0EF00EBBBEC /* IRActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED1C1451E0EF00EBBBEC /* IRActor.h */; };
+		0BC6ED341451E0EF00EBBBEC /* IRContextException.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC6ED1D1451E0EF00EBBBEC /* IRContextException.h */; };
+		0BC6ED451451E0F900EBBBEC /* IRCommandMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED351451E0F900EBBBEC /* IRCommandMap.m */; };
+		0BC6ED461451E0F900EBBBEC /* IRActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED361451E0F900EBBBEC /* IRActor.m */; };
+		0BC6ED471451E0F900EBBBEC /* IRMediatorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED371451E0F900EBBBEC /* IRMediatorMap.m */; };
+		0BC6ED481451E0F900EBBBEC /* IRNotificationMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED381451E0F900EBBBEC /* IRNotificationMapping.m */; };
+		0BC6ED491451E0F900EBBBEC /* IRContextException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED391451E0F900EBBBEC /* IRContextException.m */; };
+		0BC6ED4A1451E0F900EBBBEC /* IRNotificationMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3A1451E0F900EBBBEC /* IRNotificationMap.m */; };
+		0BC6ED4B1451E0F900EBBBEC /* IRCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3B1451E0F900EBBBEC /* IRCallback.m */; };
+		0BC6ED4C1451E0F900EBBBEC /* IRMediatorMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3C1451E0F900EBBBEC /* IRMediatorMapping.m */; };
+		0BC6ED4D1451E0F900EBBBEC /* IRContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3D1451E0F900EBBBEC /* IRContext.m */; };
+		0BC6ED4E1451E0F900EBBBEC /* IRCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3E1451E0F900EBBBEC /* IRCommand.m */; };
+		0BC6ED4F1451E0F900EBBBEC /* IRObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED3F1451E0F900EBBBEC /* IRObjectionInjector.m */; };
+		0BC6ED501451E0F900EBBBEC /* IRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED401451E0F900EBBBEC /* IRViewController.m */; };
+		0BC6ED511451E0F900EBBBEC /* IRMediatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED411451E0F900EBBBEC /* IRMediatedViewController.m */; };
+		0BC6ED521451E0F900EBBBEC /* IRMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED421451E0F900EBBBEC /* IRMediator.m */; };
+		0BC6ED531451E0F900EBBBEC /* IRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED431451E0F900EBBBEC /* IRConstants.m */; };
+		0BC6ED541451E0F900EBBBEC /* IRObjectionInjectorException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED441451E0F900EBBBEC /* IRObjectionInjectorException.m */; };
+		0BFB352F1439E86D00BE904C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352E1439E86D00BE904C /* Foundation.framework */; };
+		0BFB353D1439E86D00BE904C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB353C1439E86D00BE904C /* SenTestingKit.framework */; };
+		0BFB35401439E86D00BE904C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352E1439E86D00BE904C /* Foundation.framework */; };
+		0BFB354B1439E86D00BE904C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB35491439E86D00BE904C /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BFB35431439E86D00BE904C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BFB35221439E86D00BE904C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BFB352A1439E86D00BE904C;
+			remoteInfo = iRobotlegs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B015407143A27DA0045A1FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0B015409143A27EA0045A1FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0B01541E143A2B910045A1FB /* TestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestProtocol.h; sourceTree = "<group>"; };
+		0B01541F143A2B910045A1FB /* TestSuperclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSuperclass.h; sourceTree = "<group>"; };
+		0B015420143A2B910045A1FB /* TestSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSubclass.h; sourceTree = "<group>"; };
+		0B015421143A2B910045A1FB /* TestClassImplementsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClassImplementsProtocol.h; sourceTree = "<group>"; };
+		0B015422143A2B910045A1FB /* TestClassUnrelated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClassUnrelated.h; sourceTree = "<group>"; };
+		0B015423143A2B910045A1FB /* TestClassUnrelatedOther.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClassUnrelatedOther.h; sourceTree = "<group>"; };
+		0B01542B143A2BB00045A1FB /* TestSuperclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSuperclass.m; sourceTree = "<group>"; };
+		0B01542C143A2BB00045A1FB /* TestSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSubclass.m; sourceTree = "<group>"; };
+		0B01542D143A2BB00045A1FB /* TestClassImplementsProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClassImplementsProtocol.m; sourceTree = "<group>"; };
+		0B01542E143A2BB00045A1FB /* TestClassUnrelated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClassUnrelated.m; sourceTree = "<group>"; };
+		0B01542F143A2BB00045A1FB /* TestClassUnrelatedOther.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClassUnrelatedOther.m; sourceTree = "<group>"; };
+		0B015435143A2BBD0045A1FB /* IRObjectionAdapterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRObjectionAdapterTests.m; sourceTree = "<group>"; };
+		0B015437143A2BCC0045A1FB /* IRActorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRActorTests.m; sourceTree = "<group>"; };
+		0B015438143A2BCC0045A1FB /* IRMediatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRMediatorTests.m; sourceTree = "<group>"; };
+		0B015443143A2C2E0045A1FB /* IRCommandMapTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRCommandMapTests.h; sourceTree = "<group>"; };
+		0B015444143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRCommandMapTestsWithNotificationType.h; sourceTree = "<group>"; };
+		0B015445143A2C2E0045A1FB /* IRNotificationMapTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRNotificationMapTests.h; sourceTree = "<group>"; };
+		0B015449143A2C440045A1FB /* IRCommandMapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRCommandMapTests.m; sourceTree = "<group>"; };
+		0B01544A143A2C440045A1FB /* IRMediatorMapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRMediatorMapTests.m; sourceTree = "<group>"; };
+		0B01544B143A2C440045A1FB /* IRCommandMapTestsWithNotificationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRCommandMapTestsWithNotificationType.m; sourceTree = "<group>"; };
+		0B01544C143A2C440045A1FB /* IRNotificationMapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRNotificationMapTests.m; sourceTree = "<group>"; };
+		0B015452143A2C720045A1FB /* TestMediatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMediatedObject.h; sourceTree = "<group>"; };
+		0B015453143A2C720045A1FB /* TestMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMediator.h; sourceTree = "<group>"; };
+		0B015454143A2C720045A1FB /* TestCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCommand.h; sourceTree = "<group>"; };
+		0B015455143A2C720045A1FB /* TestNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNotification.h; sourceTree = "<group>"; };
+		0B015456143A2C720045A1FB /* NotificationNameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNameConstants.h; sourceTree = "<group>"; };
+		0B015457143A2C720045A1FB /* IRCommandMapTestsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRCommandMapTestsProtocol.h; sourceTree = "<group>"; };
+		0B015458143A2C720045A1FB /* TestMediatedObjectSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMediatedObjectSubclass.h; sourceTree = "<group>"; };
+		0B015459143A2C8E0045A1FB /* TestMediatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMediatedObject.m; sourceTree = "<group>"; };
+		0B01545A143A2C8E0045A1FB /* TestMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TestMediator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0B01545B143A2C8E0045A1FB /* TestCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TestCommand.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0B01545C143A2C8E0045A1FB /* TestNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNotification.m; sourceTree = "<group>"; };
+		0B01545D143A2C8E0045A1FB /* NotificationNameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationNameConstants.m; sourceTree = "<group>"; };
+		0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMediatedObjectSubclass.m; sourceTree = "<group>"; };
+		0B95242F1452F8F1000DBB8A /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "Frameworks/Objection-iOS.framework"; sourceTree = "<group>"; };
+		0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Frameworks/OCHamcrestIOS.framework; sourceTree = "<group>"; };
+		0BC6ED071451E0EF00EBBBEC /* IRCommandMapProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCommandMapProtocol.h; path = ../IRCommandMapProtocol.h; sourceTree = "<group>"; };
+		0BC6ED081451E0EF00EBBBEC /* IRCommandMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCommandMap.h; path = ../IRCommandMap.h; sourceTree = "<group>"; };
+		0BC6ED091451E0EF00EBBBEC /* IRCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCallback.h; path = ../IRCallback.h; sourceTree = "<group>"; };
+		0BC6ED0A1451E0EF00EBBBEC /* IRMediatorMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatorMapping.h; path = ../IRMediatorMapping.h; sourceTree = "<group>"; };
+		0BC6ED0B1451E0EF00EBBBEC /* IRNotificationMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRNotificationMapping.h; path = ../IRNotificationMapping.h; sourceTree = "<group>"; };
+		0BC6ED0C1451E0EF00EBBBEC /* IRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRViewController.h; path = ../IRViewController.h; sourceTree = "<group>"; };
+		0BC6ED0D1451E0EF00EBBBEC /* IRMediatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatedViewController.h; path = ../IRMediatedViewController.h; sourceTree = "<group>"; };
+		0BC6ED0E1451E0EF00EBBBEC /* IRCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCommand.h; path = ../IRCommand.h; sourceTree = "<group>"; };
+		0BC6ED0F1451E0EF00EBBBEC /* IRobotlegs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRobotlegs.h; sourceTree = "<group>"; };
+		0BC6ED101451E0EF00EBBBEC /* IRContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRContext.h; path = ../IRContext.h; sourceTree = "<group>"; };
+		0BC6ED111451E0EF00EBBBEC /* IRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRConstants.h; sourceTree = "<group>"; };
+		0BC6ED121451E0EF00EBBBEC /* IRObjectionInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRObjectionInjector.h; path = ../IRObjectionInjector.h; sourceTree = "<group>"; };
+		0BC6ED131451E0EF00EBBBEC /* IRMediatorMapProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatorMapProtocol.h; path = ../IRMediatorMapProtocol.h; sourceTree = "<group>"; };
+		0BC6ED141451E0EF00EBBBEC /* IRMediatorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatorMap.h; path = ../IRMediatorMap.h; sourceTree = "<group>"; };
+		0BC6ED151451E0EF00EBBBEC /* IRMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediator.h; path = ../IRMediator.h; sourceTree = "<group>"; };
+		0BC6ED161451E0EF00EBBBEC /* IRCommandProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCommandProtocol.h; path = ../IRCommandProtocol.h; sourceTree = "<group>"; };
+		0BC6ED171451E0EF00EBBBEC /* IRMediatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatorProtocol.h; path = ../IRMediatorProtocol.h; sourceTree = "<group>"; };
+		0BC6ED181451E0EF00EBBBEC /* IRInjectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRInjectorProtocol.h; path = ../IRInjectorProtocol.h; sourceTree = "<group>"; };
+		0BC6ED191451E0EF00EBBBEC /* IRObjectionInjectorException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRObjectionInjectorException.h; path = ../IRObjectionInjectorException.h; sourceTree = "<group>"; };
+		0BC6ED1A1451E0EF00EBBBEC /* IRNotificationMapProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRNotificationMapProtocol.h; path = ../IRNotificationMapProtocol.h; sourceTree = "<group>"; };
+		0BC6ED1B1451E0EF00EBBBEC /* IRNotificationMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRNotificationMap.h; path = ../IRNotificationMap.h; sourceTree = "<group>"; };
+		0BC6ED1C1451E0EF00EBBBEC /* IRActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRActor.h; path = ../IRActor.h; sourceTree = "<group>"; };
+		0BC6ED1D1451E0EF00EBBBEC /* IRContextException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRContextException.h; sourceTree = "<group>"; };
+		0BC6ED351451E0F900EBBBEC /* IRCommandMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRCommandMap.m; path = ../IRCommandMap.m; sourceTree = "<group>"; };
+		0BC6ED361451E0F900EBBBEC /* IRActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRActor.m; path = ../IRActor.m; sourceTree = "<group>"; };
+		0BC6ED371451E0F900EBBBEC /* IRMediatorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRMediatorMap.m; path = ../IRMediatorMap.m; sourceTree = "<group>"; };
+		0BC6ED381451E0F900EBBBEC /* IRNotificationMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRNotificationMapping.m; path = ../IRNotificationMapping.m; sourceTree = "<group>"; };
+		0BC6ED391451E0F900EBBBEC /* IRContextException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRContextException.m; sourceTree = "<group>"; };
+		0BC6ED3A1451E0F900EBBBEC /* IRNotificationMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRNotificationMap.m; path = ../IRNotificationMap.m; sourceTree = "<group>"; };
+		0BC6ED3B1451E0F900EBBBEC /* IRCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRCallback.m; path = ../IRCallback.m; sourceTree = "<group>"; };
+		0BC6ED3C1451E0F900EBBBEC /* IRMediatorMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRMediatorMapping.m; path = ../IRMediatorMapping.m; sourceTree = "<group>"; };
+		0BC6ED3D1451E0F900EBBBEC /* IRContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRContext.m; path = ../IRContext.m; sourceTree = "<group>"; };
+		0BC6ED3E1451E0F900EBBBEC /* IRCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRCommand.m; path = ../IRCommand.m; sourceTree = "<group>"; };
+		0BC6ED3F1451E0F900EBBBEC /* IRObjectionInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRObjectionInjector.m; path = ../IRObjectionInjector.m; sourceTree = "<group>"; };
+		0BC6ED401451E0F900EBBBEC /* IRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRViewController.m; path = ../IRViewController.m; sourceTree = "<group>"; };
+		0BC6ED411451E0F900EBBBEC /* IRMediatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRMediatedViewController.m; path = ../IRMediatedViewController.m; sourceTree = "<group>"; };
+		0BC6ED421451E0F900EBBBEC /* IRMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRMediator.m; path = ../IRMediator.m; sourceTree = "<group>"; };
+		0BC6ED431451E0F900EBBBEC /* IRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRConstants.m; sourceTree = "<group>"; };
+		0BC6ED441451E0F900EBBBEC /* IRObjectionInjectorException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRObjectionInjectorException.m; path = ../IRObjectionInjectorException.m; sourceTree = "<group>"; };
+		0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIRobotlegsSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFB352E1439E86D00BE904C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0BFB35321439E86D00BE904C /* IRobotlegs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IRobotlegs-Prefix.pch"; sourceTree = "<group>"; };
+		0BFB353B1439E86D00BE904C /* IRobotlegsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRobotlegsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BFB353C1439E86D00BE904C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0BFB35481439E86D00BE904C /* IRobotlegsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IRobotlegsTests-Info.plist"; sourceTree = "<group>"; };
+		0BFB354A1439E86D00BE904C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BFB35281439E86D00BE904C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFB352F1439E86D00BE904C /* Foundation.framework in Frameworks */,
+				0B9524311452F8F1000DBB8A /* Objection-iOS.framework in Frameworks */,
+				0B9524321452F8F1000DBB8A /* OCHamcrestIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFB35371439E86D00BE904C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B8A74C5143A3FEB00F89D29 /* libIRobotlegsSimulator.a in Frameworks */,
+				0B01540A143A27EA0045A1FB /* UIKit.framework in Frameworks */,
+				0B015408143A27DA0045A1FB /* CoreGraphics.framework in Frameworks */,
+				0BFB353D1439E86D00BE904C /* SenTestingKit.framework in Frameworks */,
+				0BFB35401439E86D00BE904C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B015412143A2AE30045A1FB /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0B01541C143A2B580045A1FB /* injection */,
+				0B01541B143A2B4F0045A1FB /* core */,
+				0B01541A143A2B480045A1FB /* mvcs */,
+				0B015419143A2B3F0045A1FB /* base */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		0B015413143A2AFD0045A1FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0B015414143A2B300045A1FB /* base */,
+				0B015416143A2B300045A1FB /* mvcs */,
+				0B015418143A2B300045A1FB /* injection */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		0B015414143A2B300045A1FB /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0B015449143A2C440045A1FB /* IRCommandMapTests.m */,
+				0B01544A143A2C440045A1FB /* IRMediatorMapTests.m */,
+				0B01544B143A2C440045A1FB /* IRCommandMapTestsWithNotificationType.m */,
+				0B01544C143A2C440045A1FB /* IRNotificationMapTests.m */,
+				0B015415143A2B300045A1FB /* support */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		0B015415143A2B300045A1FB /* support */ = {
+			isa = PBXGroup;
+			children = (
+				0B015459143A2C8E0045A1FB /* TestMediatedObject.m */,
+				0B01545A143A2C8E0045A1FB /* TestMediator.m */,
+				0B01545B143A2C8E0045A1FB /* TestCommand.m */,
+				0B01545C143A2C8E0045A1FB /* TestNotification.m */,
+				0B01545D143A2C8E0045A1FB /* NotificationNameConstants.m */,
+				0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */,
+			);
+			name = support;
+			path = helper;
+			sourceTree = "<group>";
+		};
+		0B015416143A2B300045A1FB /* mvcs */ = {
+			isa = PBXGroup;
+			children = (
+				0B015437143A2BCC0045A1FB /* IRActorTests.m */,
+				0B015438143A2BCC0045A1FB /* IRMediatorTests.m */,
+			);
+			path = mvcs;
+			sourceTree = "<group>";
+		};
+		0B015418143A2B300045A1FB /* injection */ = {
+			isa = PBXGroup;
+			children = (
+				0B015435143A2BBD0045A1FB /* IRObjectionAdapterTests.m */,
+				0B01542A143A2B9B0045A1FB /* support */,
+			);
+			path = injection;
+			sourceTree = "<group>";
+		};
+		0B015419143A2B3F0045A1FB /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0B015451143A2C620045A1FB /* support */,
+				0B015443143A2C2E0045A1FB /* IRCommandMapTests.h */,
+				0B015444143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h */,
+				0B015445143A2C2E0045A1FB /* IRNotificationMapTests.h */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		0B01541A143A2B480045A1FB /* mvcs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = mvcs;
+			sourceTree = "<group>";
+		};
+		0B01541B143A2B4F0045A1FB /* core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		0B01541C143A2B580045A1FB /* injection */ = {
+			isa = PBXGroup;
+			children = (
+				0B01541D143A2B6A0045A1FB /* support */,
+			);
+			name = injection;
+			sourceTree = "<group>";
+		};
+		0B01541D143A2B6A0045A1FB /* support */ = {
+			isa = PBXGroup;
+			children = (
+				0B01541E143A2B910045A1FB /* TestProtocol.h */,
+				0B01541F143A2B910045A1FB /* TestSuperclass.h */,
+				0B015420143A2B910045A1FB /* TestSubclass.h */,
+				0B015421143A2B910045A1FB /* TestClassImplementsProtocol.h */,
+				0B015422143A2B910045A1FB /* TestClassUnrelated.h */,
+				0B015423143A2B910045A1FB /* TestClassUnrelatedOther.h */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		0B01542A143A2B9B0045A1FB /* support */ = {
+			isa = PBXGroup;
+			children = (
+				0B01542B143A2BB00045A1FB /* TestSuperclass.m */,
+				0B01542C143A2BB00045A1FB /* TestSubclass.m */,
+				0B01542D143A2BB00045A1FB /* TestClassImplementsProtocol.m */,
+				0B01542E143A2BB00045A1FB /* TestClassUnrelated.m */,
+				0B01542F143A2BB00045A1FB /* TestClassUnrelatedOther.m */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		0B015451143A2C620045A1FB /* support */ = {
+			isa = PBXGroup;
+			children = (
+				0B015452143A2C720045A1FB /* TestMediatedObject.h */,
+				0B015453143A2C720045A1FB /* TestMediator.h */,
+				0B015454143A2C720045A1FB /* TestCommand.h */,
+				0B015455143A2C720045A1FB /* TestNotification.h */,
+				0B015456143A2C720045A1FB /* NotificationNameConstants.h */,
+				0B015457143A2C720045A1FB /* IRCommandMapTestsProtocol.h */,
+				0B015458143A2C720045A1FB /* TestMediatedObjectSubclass.h */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
+		0BC6ED051451E0DB00EBBBEC /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED1D1451E0EF00EBBBEC /* IRContextException.h */,
+				0BC6ED111451E0EF00EBBBEC /* IRConstants.h */,
+				0BC6ED0F1451E0EF00EBBBEC /* IRobotlegs.h */,
+				0BC6ED551451E1B600EBBBEC /* view */,
+				0BC6ED561451E1B600EBBBEC /* injector */,
+				0BC6ED571451E1B600EBBBEC /* mvcs */,
+				0BC6ED581451E1B600EBBBEC /* base */,
+				0BC6ED591451E1B600EBBBEC /* core */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		0BC6ED061451E0DB00EBBBEC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED431451E0F900EBBBEC /* IRConstants.m */,
+				0BC6ED391451E0F900EBBBEC /* IRContextException.m */,
+				0BC6ED5A1451E1BC00EBBBEC /* view */,
+				0BC6ED5B1451E1BC00EBBBEC /* injector */,
+				0BC6ED5C1451E1BC00EBBBEC /* mvcs */,
+				0BC6ED5D1451E1BC00EBBBEC /* base */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0BC6ED551451E1B600EBBBEC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED0C1451E0EF00EBBBEC /* IRViewController.h */,
+				0BC6ED0D1451E0EF00EBBBEC /* IRMediatedViewController.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0BC6ED561451E1B600EBBBEC /* injector */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED121451E0EF00EBBBEC /* IRObjectionInjector.h */,
+				0BC6ED191451E0EF00EBBBEC /* IRObjectionInjectorException.h */,
+			);
+			path = injector;
+			sourceTree = "<group>";
+		};
+		0BC6ED571451E1B600EBBBEC /* mvcs */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED101451E0EF00EBBBEC /* IRContext.h */,
+				0BC6ED0E1451E0EF00EBBBEC /* IRCommand.h */,
+				0BC6ED151451E0EF00EBBBEC /* IRMediator.h */,
+				0BC6ED1C1451E0EF00EBBBEC /* IRActor.h */,
+			);
+			path = mvcs;
+			sourceTree = "<group>";
+		};
+		0BC6ED581451E1B600EBBBEC /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED081451E0EF00EBBBEC /* IRCommandMap.h */,
+				0BC6ED141451E0EF00EBBBEC /* IRMediatorMap.h */,
+				0BC6ED1B1451E0EF00EBBBEC /* IRNotificationMap.h */,
+				0BC6ED5F1451E1DB00EBBBEC /* helper */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		0BC6ED591451E1B600EBBBEC /* core */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED071451E0EF00EBBBEC /* IRCommandMapProtocol.h */,
+				0BC6ED131451E0EF00EBBBEC /* IRMediatorMapProtocol.h */,
+				0BC6ED161451E0EF00EBBBEC /* IRCommandProtocol.h */,
+				0BC6ED171451E0EF00EBBBEC /* IRMediatorProtocol.h */,
+				0BC6ED181451E0EF00EBBBEC /* IRInjectorProtocol.h */,
+				0BC6ED1A1451E0EF00EBBBEC /* IRNotificationMapProtocol.h */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		0BC6ED5A1451E1BC00EBBBEC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED401451E0F900EBBBEC /* IRViewController.m */,
+				0BC6ED411451E0F900EBBBEC /* IRMediatedViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0BC6ED5B1451E1BC00EBBBEC /* injector */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED3F1451E0F900EBBBEC /* IRObjectionInjector.m */,
+				0BC6ED441451E0F900EBBBEC /* IRObjectionInjectorException.m */,
+			);
+			path = injector;
+			sourceTree = "<group>";
+		};
+		0BC6ED5C1451E1BC00EBBBEC /* mvcs */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED361451E0F900EBBBEC /* IRActor.m */,
+				0BC6ED3D1451E0F900EBBBEC /* IRContext.m */,
+				0BC6ED3E1451E0F900EBBBEC /* IRCommand.m */,
+				0BC6ED421451E0F900EBBBEC /* IRMediator.m */,
+			);
+			path = mvcs;
+			sourceTree = "<group>";
+		};
+		0BC6ED5D1451E1BC00EBBBEC /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED601451E28200EBBBEC /* helper */,
+				0BC6ED351451E0F900EBBBEC /* IRCommandMap.m */,
+				0BC6ED371451E0F900EBBBEC /* IRMediatorMap.m */,
+				0BC6ED3A1451E0F900EBBBEC /* IRNotificationMap.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		0BC6ED5F1451E1DB00EBBBEC /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED091451E0EF00EBBBEC /* IRCallback.h */,
+				0BC6ED0A1451E0EF00EBBBEC /* IRMediatorMapping.h */,
+				0BC6ED0B1451E0EF00EBBBEC /* IRNotificationMapping.h */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
+		0BC6ED601451E28200EBBBEC /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED381451E0F900EBBBEC /* IRNotificationMapping.m */,
+				0BC6ED3B1451E0F900EBBBEC /* IRCallback.m */,
+				0BC6ED3C1451E0F900EBBBEC /* IRMediatorMapping.m */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
+		0BFB35201439E86D00BE904C = {
+			isa = PBXGroup;
+			children = (
+				0BFB35301439E86D00BE904C /* IRobotlegs */,
+				0BFB35461439E86D00BE904C /* IRobotlegsTests */,
+				0BFB352D1439E86D00BE904C /* Frameworks */,
+				0BFB352C1439E86D00BE904C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0BFB352C1439E86D00BE904C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */,
+				0BFB353B1439E86D00BE904C /* IRobotlegsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BFB352D1439E86D00BE904C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B95242F1452F8F1000DBB8A /* Objection-iOS.framework */,
+				0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */,
+				0B015407143A27DA0045A1FB /* CoreGraphics.framework */,
+				0B015409143A27EA0045A1FB /* UIKit.framework */,
+				0BFB352E1439E86D00BE904C /* Foundation.framework */,
+				0BFB353C1439E86D00BE904C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BFB35301439E86D00BE904C /* IRobotlegs */ = {
+			isa = PBXGroup;
+			children = (
+				0BC6ED051451E0DB00EBBBEC /* Headers */,
+				0BC6ED061451E0DB00EBBBEC /* Source */,
+				0BFB35311439E86D00BE904C /* Supporting Files */,
+			);
+			name = IRobotlegs;
+			path = iRobotlegs;
+			sourceTree = "<group>";
+		};
+		0BFB35311439E86D00BE904C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BFB35321439E86D00BE904C /* IRobotlegs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BFB35461439E86D00BE904C /* IRobotlegsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B015412143A2AE30045A1FB /* Headers */,
+				0B015413143A2AFD0045A1FB /* Source */,
+				0BFB35471439E86D00BE904C /* Supporting Files */,
+			);
+			name = IRobotlegsTests;
+			path = iRobotlegsTests;
+			sourceTree = "<group>";
+		};
+		0BFB35471439E86D00BE904C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BFB35481439E86D00BE904C /* IRobotlegsTests-Info.plist */,
+				0BFB35491439E86D00BE904C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BFB35291439E86D00BE904C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B015446143A2C2E0045A1FB /* IRCommandMapTests.h in Headers */,
+				0B015447143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h in Headers */,
+				0B015448143A2C2E0045A1FB /* IRNotificationMapTests.h in Headers */,
+				0BC6ED1E1451E0EF00EBBBEC /* IRCommandMapProtocol.h in Headers */,
+				0BC6ED1F1451E0EF00EBBBEC /* IRCommandMap.h in Headers */,
+				0BC6ED201451E0EF00EBBBEC /* IRCallback.h in Headers */,
+				0BC6ED211451E0EF00EBBBEC /* IRMediatorMapping.h in Headers */,
+				0BC6ED221451E0EF00EBBBEC /* IRNotificationMapping.h in Headers */,
+				0BC6ED231451E0EF00EBBBEC /* IRViewController.h in Headers */,
+				0BC6ED241451E0EF00EBBBEC /* IRMediatedViewController.h in Headers */,
+				0BC6ED251451E0EF00EBBBEC /* IRCommand.h in Headers */,
+				0BC6ED261451E0EF00EBBBEC /* IRobotlegs.h in Headers */,
+				0BC6ED271451E0EF00EBBBEC /* IRContext.h in Headers */,
+				0BC6ED281451E0EF00EBBBEC /* IRConstants.h in Headers */,
+				0BC6ED291451E0EF00EBBBEC /* IRObjectionInjector.h in Headers */,
+				0BC6ED2A1451E0EF00EBBBEC /* IRMediatorMapProtocol.h in Headers */,
+				0BC6ED2B1451E0EF00EBBBEC /* IRMediatorMap.h in Headers */,
+				0BC6ED2C1451E0EF00EBBBEC /* IRMediator.h in Headers */,
+				0BC6ED2D1451E0EF00EBBBEC /* IRCommandProtocol.h in Headers */,
+				0BC6ED2E1451E0EF00EBBBEC /* IRMediatorProtocol.h in Headers */,
+				0BC6ED2F1451E0EF00EBBBEC /* IRInjectorProtocol.h in Headers */,
+				0BC6ED301451E0EF00EBBBEC /* IRObjectionInjectorException.h in Headers */,
+				0BC6ED311451E0EF00EBBBEC /* IRNotificationMapProtocol.h in Headers */,
+				0BC6ED321451E0EF00EBBBEC /* IRNotificationMap.h in Headers */,
+				0BC6ED331451E0EF00EBBBEC /* IRActor.h in Headers */,
+				0BC6ED341451E0EF00EBBBEC /* IRContextException.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0BFB352A1439E86D00BE904C /* IRobotlegsSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFB35521439E86D00BE904C /* Build configuration list for PBXNativeTarget "IRobotlegsSimulator" */;
+			buildPhases = (
+				0BFB35271439E86D00BE904C /* Sources */,
+				0BFB35281439E86D00BE904C /* Frameworks */,
+				0BFB35291439E86D00BE904C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IRobotlegsSimulator;
+			productName = iRobotlegs;
+			productReference = 0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0BFB353A1439E86D00BE904C /* IRobotlegsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BFB35551439E86D00BE904C /* Build configuration list for PBXNativeTarget "IRobotlegsTests" */;
+			buildPhases = (
+				0BFB35361439E86D00BE904C /* Sources */,
+				0BFB35371439E86D00BE904C /* Frameworks */,
+				0BFB35381439E86D00BE904C /* Resources */,
+				0BFB35391439E86D00BE904C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BFB35441439E86D00BE904C /* PBXTargetDependency */,
+			);
+			name = IRobotlegsTests;
+			productName = iRobotlegsTests;
+			productReference = 0BFB353B1439E86D00BE904C /* IRobotlegsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BFB35221439E86D00BE904C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = 1ndivisible;
+			};
+			buildConfigurationList = 0BFB35251439E86D00BE904C /* Build configuration list for PBXProject "IRobotlegs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0BFB35201439E86D00BE904C;
+			productRefGroup = 0BFB352C1439E86D00BE904C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BFB352A1439E86D00BE904C /* IRobotlegsSimulator */,
+				0BFB353A1439E86D00BE904C /* IRobotlegsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BFB35381439E86D00BE904C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFB354B1439E86D00BE904C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BFB35391439E86D00BE904C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BFB35271439E86D00BE904C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC6ED451451E0F900EBBBEC /* IRCommandMap.m in Sources */,
+				0BC6ED461451E0F900EBBBEC /* IRActor.m in Sources */,
+				0BC6ED471451E0F900EBBBEC /* IRMediatorMap.m in Sources */,
+				0BC6ED481451E0F900EBBBEC /* IRNotificationMapping.m in Sources */,
+				0BC6ED491451E0F900EBBBEC /* IRContextException.m in Sources */,
+				0BC6ED4A1451E0F900EBBBEC /* IRNotificationMap.m in Sources */,
+				0BC6ED4B1451E0F900EBBBEC /* IRCallback.m in Sources */,
+				0BC6ED4C1451E0F900EBBBEC /* IRMediatorMapping.m in Sources */,
+				0BC6ED4D1451E0F900EBBBEC /* IRContext.m in Sources */,
+				0BC6ED4E1451E0F900EBBBEC /* IRCommand.m in Sources */,
+				0BC6ED4F1451E0F900EBBBEC /* IRObjectionInjector.m in Sources */,
+				0BC6ED501451E0F900EBBBEC /* IRViewController.m in Sources */,
+				0BC6ED511451E0F900EBBBEC /* IRMediatedViewController.m in Sources */,
+				0BC6ED521451E0F900EBBBEC /* IRMediator.m in Sources */,
+				0BC6ED531451E0F900EBBBEC /* IRConstants.m in Sources */,
+				0BC6ED541451E0F900EBBBEC /* IRObjectionInjectorException.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BFB35361439E86D00BE904C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B01543B143A2BDA0045A1FB /* TestSuperclass.m in Sources */,
+				0B01543C143A2BDA0045A1FB /* TestSubclass.m in Sources */,
+				0B01543D143A2BDA0045A1FB /* TestClassImplementsProtocol.m in Sources */,
+				0B01543E143A2BDA0045A1FB /* TestClassUnrelated.m in Sources */,
+				0B01543F143A2BDA0045A1FB /* TestClassUnrelatedOther.m in Sources */,
+				0B015440143A2BF20045A1FB /* IRActorTests.m in Sources */,
+				0B015441143A2BF20045A1FB /* IRMediatorTests.m in Sources */,
+				0B015442143A2BF80045A1FB /* IRObjectionAdapterTests.m in Sources */,
+				0B01544D143A2C440045A1FB /* IRCommandMapTests.m in Sources */,
+				0B01544E143A2C440045A1FB /* IRMediatorMapTests.m in Sources */,
+				0B01544F143A2C440045A1FB /* IRCommandMapTestsWithNotificationType.m in Sources */,
+				0B015450143A2C440045A1FB /* IRNotificationMapTests.m in Sources */,
+				0B01545F143A2C8E0045A1FB /* TestMediatedObject.m in Sources */,
+				0B015460143A2C8E0045A1FB /* TestMediator.m in Sources */,
+				0B015461143A2C8E0045A1FB /* TestCommand.m in Sources */,
+				0B015462143A2C8E0045A1FB /* TestNotification.m in Sources */,
+				0B015463143A2C8E0045A1FB /* NotificationNameConstants.m in Sources */,
+				0B015464143A2C8E0045A1FB /* TestMediatedObjectSubclass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BFB35441439E86D00BE904C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BFB352A1439E86D00BE904C /* IRobotlegsSimulator */;
+			targetProxy = 0BFB35431439E86D00BE904C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BFB35491439E86D00BE904C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BFB354A1439E86D00BE904C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BFB35501439E86D00BE904C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-all_load";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0BFB35511439E86D00BE904C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-all_load";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BFB35531439E86D00BE904C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iRobotlegs.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRobotlegs/IRobotlegs-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = IRobotlegsSimulator;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0BFB35541439E86D00BE904C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iRobotlegs.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRobotlegs/IRobotlegs-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = IRobotlegsSimulator;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0BFB35561439E86D00BE904C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRobotlegs/iRobotlegs-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				INFOPLIST_FILE = "iRobotlegsTests/IRobotlegsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = IRobotlegsTests;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0BFB35571439E86D00BE904C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iRobotlegs/iRobotlegs-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				INFOPLIST_FILE = "iRobotlegsTests/IRobotlegsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = IRobotlegsTests;
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BFB35251439E86D00BE904C /* Build configuration list for PBXProject "IRobotlegs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFB35501439E86D00BE904C /* Debug */,
+				0BFB35511439E86D00BE904C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFB35521439E86D00BE904C /* Build configuration list for PBXNativeTarget "IRobotlegsSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFB35531439E86D00BE904C /* Debug */,
+				0BFB35541439E86D00BE904C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BFB35551439E86D00BE904C /* Build configuration list for PBXNativeTarget "IRobotlegsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BFB35561439E86D00BE904C /* Debug */,
+				0BFB35571439E86D00BE904C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BFB35221439E86D00BE904C /* Project object */;
+}

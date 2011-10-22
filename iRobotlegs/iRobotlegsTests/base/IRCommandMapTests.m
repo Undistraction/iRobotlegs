@@ -1,0 +1,239 @@
+//
+//  iRobotlegs - IRCommandMapTests.m
+//  Copyright (c) 2011 the original author or authors
+
+//  Permission is hereby granted to use, modify, and distribute this file 
+//  in accordance with the terms of the license agreement accompanying it.
+//
+//  Created by: Pedr Browne
+//
+
+#import "IRCommandMapTests.h"
+#import "IRContextException.h"
+// Class under test
+#import "IRCommandMap.h"
+
+// Collaborators
+#import "TestNotification.h"
+#import "TestCommand.h"
+#import "NotificationNameConstants.h"
+
+// Test support
+#import <SenTestingKit/SenTestingKit.h>
+#define HC_SHORTHAND
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
+
+@implementation IRCommandMapTests
+
+
+//------------------------------------------------------------------------------
+//  SetUp / TearDown
+//------------------------------------------------------------------------------
+ 
+-(void)setUp
+{
+    commandExecuted = NO;
+    injector = [[IRObjectionInjector alloc] init ];
+    notificationCenter = [[NSNotificationCenter alloc] init];
+    commandMap = [[IRCommandMap alloc] init ];
+    commandMap.injector = injector;
+    commandMap.notificationCenter = notificationCenter;
+    [injector whenAskedForProtocol:@protocol(IRCommand) supplyClass:[TestCommand class]];
+    [injector whenAskedForProtocol:@protocol(IRCommandMapTests) supplyInstance:self];
+}
+
+-(void)tearDown
+{
+    [commandMap release];
+    [injector release];
+    [notificationCenter release];
+}
+
+
+//------------------------------------------------------------------------------
+//  Tests
+//------------------------------------------------------------------------------
+
+-(void)testNoCommand
+{
+    TestNotification *notification = [[TestNotification alloc] initWithObject:self];
+    [notificationCenter postNotification: notification];
+    assertThatBool(commandExecuted, is(equalToBool(NO)));
+}
+
+-(void)testHasCommand
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO];
+                        
+    BOOL hasCommand = [commandMap hasNotificationCommand:TEST_NOTIFICATION_NAME 
+                                            commandClass:[TestCommand class]
+                                       notificationClass:nil];
+                     
+    assertThatBool(hasCommand, is(equalToBool(YES)));
+}
+
+-(void)testNormalCommand
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+}
+
+-(void)testNormalCommandwithNSNotificationSubclass
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO];
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+}
+
+-(void)testNormalCommandRepeated
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO];
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+}
+
+-(void)testOneShotCommand
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:YES];
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(NO)));
+}
+
+-(void)testNormalCommandRemoved
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO];
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [commandMap unmapNotification:TEST_NOTIFICATION_NAME 
+                     commandClass:[TestCommand class] 
+                notificationClass:nil];
+    [notificationCenter postNotification:[[TestNotification alloc] initWithObject: self]];
+    assertThatBool(commandExecuted, is(equalToBool(NO)));
+}
+
+-(void)testMultipleEvents
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME_ONE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_TWO
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_THREE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_FOUR
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_FIVE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+                        
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_ONE object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_TWO object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_THREE object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_FOUR object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+    commandExecuted = NO;
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_FIVE object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(YES)));
+}
+
+-(void)testUnmapEvents
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME_ONE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_TWO
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_THREE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_FOUR
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+     [commandMap mapNotification:TEST_NOTIFICATION_NAME_FIVE
+                   commandClass:[TestCommand class]
+              notificationClass:nil
+                        oneshot:NO];
+    [commandMap unmapNotifications];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_ONE object:self]];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_TWO object:self]];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_THREE object:self]];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_FOUR object:self]];
+    [notificationCenter postNotification:[NSNotification notificationWithName:TEST_NOTIFICATION_NAME_FIVE object:self]];
+    assertThatBool(commandExecuted, is(equalToBool(NO)));
+}
+
+-(void)testmappingNonCommandClassShouldFail
+{
+    STAssertThrowsSpecific([commandMap mapNotification:TEST_NOTIFICATION_NAME_ONE
+                   commandClass:[NSString class]
+              notificationClass:nil
+                        oneshot:NO], IRContextException, nil);
+}
+
+-(void)testmappingSamCommandTwiceShouldFail
+{
+    [commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO];  
+    STAssertThrowsSpecific([commandMap mapNotification:TEST_NOTIFICATION_NAME
+                   commandClass:[TestCommand class]
+              notificationClass:nil 
+                        oneshot:NO], IRContextException, nil);
+}
+
+//------------------------------------------------------------------------------
+//  Public
+//------------------------------------------------------------------------------ 
+
+-(void)commandDidExecute
+{
+    commandExecuted = YES;
+}
+
+@end
