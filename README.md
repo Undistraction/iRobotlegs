@@ -21,7 +21,13 @@ Objective-C has no support for meta-data or any kind of annotations, so I've ech
 
 ###Basic Usage
 
-For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at [http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. There are some basic diagrams in the Documents folder which might help if you are new to Robotlegs. 
+For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at [http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. There are some basic diagrams in the Documents folder which might help if you are new to Robotlegs.
+
+###Examples
+
+The example FlickrGalleryBuilderMK2 is a simple application that allows you to search Flickr for images uisng a keyword. You can then accept or reject each of the photos returned, building a gallery of your accepted images. These galleries remain editable and are persisted using CoreData. **Please note you will need your own Flickr API key and Secret which you will need to enter into the file FlickrAPIKey.m.** Keys are available if you sign up to a free Flickr account.
+
+ 
 
 ###Roadmap
 
