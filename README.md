@@ -2,7 +2,7 @@
 
 **iRobotlegs** is an Objective-C/Cocoa Touch port of the popular [**Robotlegs**]() MVCS Mircro-architecture for Actionscript 3. It aims to stick as closely as possible to the original framework without fighting against Cocoa-Touch. It should be familiar enough for someone who has used the original framework to find their way around easily, but it should be easy to understand for someone familiar with Objective-C but not the original framework. Where **Robotlegs** uses [**SwiftSuspenders**](https://github.com/tschneidereit/SwiftSuspenders) for its dependency injection needs, **iRobotlegs** uses a modified version of the excellent [**Objection**](https://github.com/atomicobject/objection) framework. There is an example project; 'FlickrGalleryBuilderMK2' in the examples folder and I aim to add more examples as time allows.
 
-####Aims and Benefits
+###Aims and Benefits
 
 The aim of **iRobotlegs** is the same as that of robotlegs; to make application development easier and more consistant accross projects, to encourage clear separtion of the application into Model, View, Controller and Service regions,to encourage and enable loose coupling between these regions through the use of dependency injection and Event/Notification based communication, and to lower the cognitive hit from appraising or maintaining understanding of a growing project through consistancy. As with most similar frameworks it is not always the best answer, and for trivial applications it will be overkill.
 
@@ -21,7 +21,7 @@ Objective-C has no support for meta-data or any kind of annotations, so I've ech
 
 ###Basic Usage
 
-For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at [http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. 
+For a quick look at framework setup take a look at AppContext in the example application. There is also comprehensive documentation for Robotlegs over at [http://www.robotlegs.org/](robotlegs.org) and an [excellent book](http://www.amazon.co.uk/ActionScript-Developers-Guide-Robotlegs-Hooks/dp/1449308902/ref=sr_1_1?ie=UTF8&qid=1319298955&sr=8-1) on the framework published by O'Reilly. There are some basic diagrams in the Documents folder which might help if you are new to Robotlegs. 
 
 ###Roadmap
 

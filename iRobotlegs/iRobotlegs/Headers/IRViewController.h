@@ -30,8 +30,9 @@
 //  Initialisation
 //------------------------------------------------------------------------------
 
+
 -(IRViewController *)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter;
-- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle notificationCenter:(NSNotificationCenter *)notificationCenter;
+- (IRViewController *)initWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle notificationCenter:(NSNotificationCenter *)notificationCenter;
 
 //------------------------------------------------------------------------------
 //  API
