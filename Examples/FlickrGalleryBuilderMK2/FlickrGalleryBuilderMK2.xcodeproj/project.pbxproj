@@ -56,8 +56,8 @@
 		0B4F36511452FE7800E43B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4F362E1452FE7700E43B31 /* AppDelegate.m */; };
 		0B4F36521452FE7800E43B31 /* GalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4F362F1452FE7700E43B31 /* GalleryView.xib */; };
 		0B4F36531452FE7800E43B31 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4F36301452FE7700E43B31 /* SearchView.xib */; };
-		0B4F36591452FEDA00E43B31 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4F36581452FEDA00E43B31 /* Objection-iOS.framework */; };
 		0B4F365C1453020900E43B31 /* libsbjson-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4F365B1453020900E43B31 /* libsbjson-ios.a */; };
+		0B60A4AA1456C07D008A51B7 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B60A4A91456C07D008A51B7 /* Objection-iOS.framework */; };
 		0B9AC232144B44DD00331940 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9AC231144B44DD00331940 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,7 +159,6 @@
 		0B4F362E1452FE7700E43B31 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FlickrGalleryBuilderMK2/Source/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		0B4F362F1452FE7700E43B31 /* GalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GalleryView.xib; path = FlickrGalleryBuilderMK2/Source/GalleryView.xib; sourceTree = SOURCE_ROOT; };
 		0B4F36301452FE7700E43B31 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchView.xib; path = FlickrGalleryBuilderMK2/Source/SearchView.xib; sourceTree = SOURCE_ROOT; };
-		0B4F36581452FEDA00E43B31 /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "../iRobotlegs/Frameworks/Objection-iOS.framework"; sourceTree = "<group>"; };
 		0B4F365B1453020900E43B31 /* libsbjson-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsbjson-ios.a"; path = "Frameworks/libsbjson-ios.a"; sourceTree = "<group>"; };
 		0B4F368C14530D2000E43B31 /* IRContextException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRContextException.h; sourceTree = "<group>"; };
 		0B4F368D14530D2000E43B31 /* IRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRConstants.h; sourceTree = "<group>"; };
@@ -184,6 +183,7 @@
 		0B4F36A614530D2000E43B31 /* IRMediatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRMediatorProtocol.h; path = ../IRMediatorProtocol.h; sourceTree = "<group>"; };
 		0B4F36A714530D2000E43B31 /* IRInjectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRInjectorProtocol.h; path = ../IRInjectorProtocol.h; sourceTree = "<group>"; };
 		0B4F36A814530D2000E43B31 /* IRNotificationMapProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRNotificationMapProtocol.h; path = ../IRNotificationMapProtocol.h; sourceTree = "<group>"; };
+		0B60A4A91456C07D008A51B7 /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "Frameworks/Objection-iOS.framework"; sourceTree = SOURCE_ROOT; };
 		0B9AC231144B44DD00331940 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0BC6ECDD1451DB4B00EBBBEC /* NSObject+SBJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		0BC6ECDE1451DB4B00EBBBEC /* SBJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 				0B07E14A143DFC37007B6CD1 /* Foundation.framework in Frameworks */,
 				0B07E14C143DFC37007B6CD1 /* CoreGraphics.framework in Frameworks */,
 				0B07E14E143DFC37007B6CD1 /* CoreData.framework in Frameworks */,
-				0B4F36591452FEDA00E43B31 /* Objection-iOS.framework in Frameworks */,
 				0B4F365C1453020900E43B31 /* libsbjson-ios.a in Frameworks */,
+				0B60A4AA1456C07D008A51B7 /* Objection-iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				0B4F365B1453020900E43B31 /* libsbjson-ios.a */,
-				0B4F36581452FEDA00E43B31 /* Objection-iOS.framework */,
 				0B07E1A8143DFCBD007B6CD1 /* libIRobotlegsSimulator.a */,
+				0B60A4A91456C07D008A51B7 /* Objection-iOS.framework */,
 				0B9AC231144B44DD00331940 /* QuartzCore.framework */,
 				0B07E147143DFC37007B6CD1 /* UIKit.framework */,
 				0B07E149143DFC37007B6CD1 /* Foundation.framework */,
@@ -938,9 +938,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../iRobotlegs\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../iRobotlegs/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrGalleryBuilderMK2/FlickrGalleryBuilderMK2-Prefix.pch";
@@ -961,9 +960,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../iRobotlegs\"",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../iRobotlegs/Frameworks\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrGalleryBuilderMK2/FlickrGalleryBuilderMK2-Prefix.pch";
