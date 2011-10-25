@@ -41,10 +41,8 @@ irobotlegs_requires(@"notification",@"galleriesModel");
 
 -(void)execute
 {
-    NSLog(@"SELECT GALLERY EXECUTE");
     NSString *galleryName = [self.notification.userInfo objectForKey:@"name"];
     [self.galleriesModel selectGalleryNamed:galleryName];
-    NSLog(@"SELECT EXECUTED");
 }
 
 @end

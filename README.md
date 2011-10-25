@@ -4,7 +4,12 @@
 
 ###Aims and Benefits
 
-The aim of **iRobotlegs** is the same as that of robotlegs; to make application development easier and more consistant accross projects, to encourage clear separtion of the application into Model, View, Controller and Service regions,to encourage and enable loose coupling between these regions through the use of dependency injection and Event/Notification based communication, and to lower the cognitive hit from appraising or maintaining understanding of a growing project through consistancy. As with most similar frameworks it is not always the best answer, and for trivial applications it will be overkill.
+The aim of **iRobotlegs** is the same as that of robotlegs; to make application development easier and more consistant accross projects, to encourage clear separtion of the application into Model, View, Controller and Service regions,to encourage and enable loose coupling between these regions through the use of dependency injection and Event/Notification based communication, and to lower the cognitive hit from appraising or maintaining understanding of a growing project through consistancy. As with most similar frameworks it is not always the best answer, and for trivial applications it will be overkill. A more concrete list of benefits are:
+
+* Bannish Singletons.
+* Minimise dependencies between ViewControllers (Particularly important when writing reusable elements).
+* Encapsulate functionality in commands, minimising duplication and centralising application flow.
+
 
 ###Differences
 

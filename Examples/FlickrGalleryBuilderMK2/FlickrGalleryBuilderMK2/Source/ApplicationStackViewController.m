@@ -100,7 +100,6 @@ int const GALLERY_VIEW_INDEX = 2;
 
 -(void)contextRequestViewGallery:(NSNotification *)notification
 {
-    NSLog(@"STACK VIEW GALLERY");
     self.selectedIndex = GALLERY_VIEW_INDEX;
 }
 

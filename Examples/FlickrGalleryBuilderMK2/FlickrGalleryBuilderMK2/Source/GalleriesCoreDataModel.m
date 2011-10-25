@@ -86,7 +86,6 @@ irobotlegs_requires(@"managedObjectContext");
     NSNotification *notification = [NSNotification notificationWithName:NOTIFY_SELECTED_GALLERY_CHANGED
                                                                  object:self
                                                                userInfo:userInfo];
-    NSLog(@"POSTING CHANGE NOTE");
     [self post:notification];
 }
 

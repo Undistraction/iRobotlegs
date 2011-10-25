@@ -65,7 +65,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"VIEW DID LOAD");
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.rowHeight = 75;
@@ -73,8 +72,6 @@
     self.titleTextField.text = [galleryName stringByReplacingCharactersInRange:NSMakeRange(0,1) 
                                                                withString:[[galleryName substringToIndex:1]uppercaseString]];
     [self.tableView reloadData];
-    NSLog(@"VIEW DID LOAD 2");
-
 }
 
 - (void)viewDidUnload
@@ -138,21 +135,6 @@
 {
     [self addContextObserver:NOTIFY_SELECTED_GALLERY_CHANGED selector:@selector(contextSelectedGalleryChanged:)];
     [self addContextObserver:NOTIFY_SELECTED_GALLERY_IMAGES_CHANGED selector:@selector(contextSelectedGalleryImagesChanged:)];
-}
-
-
-//------------------------------------------------------------------------------
-//  View Handlers
-//------------------------------------------------------------------------------
-
--(IBAction)previousGalleryButtonTouchUpInside:(id)sender
-{
-    NSLog(@"PreviousGalleryButton TouchUpInside");
-}
-
--(IBAction)nextGalleryButtonTouchUpInside:(id)sender
-{
-    NSLog(@"NextGalleryButton TouchUpInside");
 }
 
 
