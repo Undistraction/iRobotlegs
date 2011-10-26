@@ -32,6 +32,9 @@
 		0B015464143A2C8E0045A1FB /* TestMediatedObjectSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */; };
 		0B27BE7A145838CD001B88A6 /* IRStoryboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B27BE78145838CD001B88A6 /* IRStoryboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B27BE7B145838CD001B88A6 /* IRStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B27BE79145838CD001B88A6 /* IRStoryboard.m */; };
+		0B27BE7D14584488001B88A6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB353C1439E86D00BE904C /* SenTestingKit.framework */; };
+		0B27BE7E145844AD001B88A6 /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */; };
+		0B27BE7F145844C7001B88A6 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B60A49E1456BDDE008A51B7 /* Objection-iOS.framework */; };
 		0B60A49F1456BDDE008A51B7 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B60A49E1456BDDE008A51B7 /* Objection-iOS.framework */; };
 		0B8A74C5143A3FEB00F89D29 /* libIRobotlegsSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */; };
 		0B9524321452F8F1000DBB8A /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */; };
@@ -75,7 +78,6 @@
 		0BC6ED531451E0F900EBBBEC /* IRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED431451E0F900EBBBEC /* IRConstants.m */; };
 		0BC6ED541451E0F900EBBBEC /* IRObjectionInjectorException.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC6ED441451E0F900EBBBEC /* IRObjectionInjectorException.m */; };
 		0BFB352F1439E86D00BE904C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352E1439E86D00BE904C /* Foundation.framework */; };
-		0BFB353D1439E86D00BE904C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB353C1439E86D00BE904C /* SenTestingKit.framework */; };
 		0BFB35401439E86D00BE904C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352E1439E86D00BE904C /* Foundation.framework */; };
 		0BFB354B1439E86D00BE904C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB35491439E86D00BE904C /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -194,10 +196,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B27BE7D14584488001B88A6 /* SenTestingKit.framework in Frameworks */,
+				0B27BE7F145844C7001B88A6 /* Objection-iOS.framework in Frameworks */,
 				0B8A74C5143A3FEB00F89D29 /* libIRobotlegsSimulator.a in Frameworks */,
+				0B27BE7E145844AD001B88A6 /* OCHamcrestIOS.framework in Frameworks */,
 				0B01540A143A27EA0045A1FB /* UIKit.framework in Frameworks */,
 				0B015408143A27DA0045A1FB /* CoreGraphics.framework in Frameworks */,
-				0BFB353D1439E86D00BE904C /* SenTestingKit.framework in Frameworks */,
 				0BFB35401439E86D00BE904C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,9 +852,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/**\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobotlegs/iRobotlegs-Prefix.pch";
@@ -878,9 +883,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-					"\"$(SRCROOT)\"",
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/**\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iRobotlegs/iRobotlegs-Prefix.pch";
@@ -897,7 +903,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = IRobotlegsTests;
-				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/Developer/Library/Frameworks/** $(inherited)/** \"$(SRCROOT)/Frameworks/**\"/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

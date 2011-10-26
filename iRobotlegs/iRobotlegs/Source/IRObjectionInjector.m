@@ -80,7 +80,6 @@
         @throw [[[IRObjectionInjectorException alloc] initWithName:E_INJECTOR_MUST_SUBCLASS_NAME 
                                                             reason:E_INJECTOR_MUST_SUBCLASS_REASON
                                                           userInfo:nil] autorelease];
-
     [JSObjection registerClass: mappedClazz];
     JSObjectionModule *module = [[[JSObjectionModule alloc] init] autorelease];
     [module bindClass:mappedClazz toClass:clazz];

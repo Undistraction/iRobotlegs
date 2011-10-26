@@ -17,6 +17,7 @@
 {
     NSNotificationCenter *notificationCenter_;
     id<IRNotificationMap> notificationMap_;
+    BOOL addedContextObservers_;
 }
 
 //------------------------------------------------------------------------------
