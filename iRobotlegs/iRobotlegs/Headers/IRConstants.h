@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 
 //Notification Names
-
 extern NSString *const OBJECT_ALLOCATED;
 extern NSString *const OBJECT_DEALLOCATED;
 

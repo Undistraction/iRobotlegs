@@ -30,6 +30,8 @@
 		0B015462143A2C8E0045A1FB /* TestNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545C143A2C8E0045A1FB /* TestNotification.m */; };
 		0B015463143A2C8E0045A1FB /* NotificationNameConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545D143A2C8E0045A1FB /* NotificationNameConstants.m */; };
 		0B015464143A2C8E0045A1FB /* TestMediatedObjectSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */; };
+		0B27BE7A145838CD001B88A6 /* IRStoryboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B27BE78145838CD001B88A6 /* IRStoryboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B27BE7B145838CD001B88A6 /* IRStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B27BE79145838CD001B88A6 /* IRStoryboard.m */; };
 		0B60A49F1456BDDE008A51B7 /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B60A49E1456BDDE008A51B7 /* Objection-iOS.framework */; };
 		0B8A74C5143A3FEB00F89D29 /* libIRobotlegsSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFB352B1439E86D00BE904C /* libIRobotlegsSimulator.a */; };
 		0B9524321452F8F1000DBB8A /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */; };
@@ -125,6 +127,8 @@
 		0B01545C143A2C8E0045A1FB /* TestNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNotification.m; sourceTree = "<group>"; };
 		0B01545D143A2C8E0045A1FB /* NotificationNameConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationNameConstants.m; sourceTree = "<group>"; };
 		0B01545E143A2C8E0045A1FB /* TestMediatedObjectSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMediatedObjectSubclass.m; sourceTree = "<group>"; };
+		0B27BE78145838CD001B88A6 /* IRStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRStoryboard.h; path = ../../Source/view/IRStoryboard.h; sourceTree = "<group>"; };
+		0B27BE79145838CD001B88A6 /* IRStoryboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRStoryboard.m; sourceTree = "<group>"; };
 		0B60A49E1456BDDE008A51B7 /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "Frameworks/Objection-iOS.framework"; sourceTree = SOURCE_ROOT; };
 		0B9524301452F8F1000DBB8A /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrestIOS.framework; path = Frameworks/OCHamcrestIOS.framework; sourceTree = SOURCE_ROOT; };
 		0BC6ED071451E0EF00EBBBEC /* IRCommandMapProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRCommandMapProtocol.h; path = iRobotlegs/Headers/IRCommandMapProtocol.h; sourceTree = SOURCE_ROOT; };
@@ -369,6 +373,7 @@
 		0BC6ED551451E1B600EBBBEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0B27BE78145838CD001B88A6 /* IRStoryboard.h */,
 				0BC6ED0C1451E0EF00EBBBEC /* IRViewController.h */,
 				0BC6ED0D1451E0EF00EBBBEC /* IRMediatedViewController.h */,
 			);
@@ -422,6 +427,7 @@
 		0BC6ED5A1451E1BC00EBBBEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0B27BE79145838CD001B88A6 /* IRStoryboard.m */,
 				0BC6ED401451E0F900EBBBEC /* IRViewController.m */,
 				0BC6ED411451E0F900EBBBEC /* IRMediatedViewController.m */,
 			);
@@ -579,6 +585,7 @@
 				0BC6ED301451E0EF00EBBBEC /* IRObjectionInjectorException.h in Headers */,
 				0BC6ED311451E0EF00EBBBEC /* IRNotificationMapProtocol.h in Headers */,
 				0BC6ED321451E0EF00EBBBEC /* IRNotificationMap.h in Headers */,
+				0B27BE7A145838CD001B88A6 /* IRStoryboard.h in Headers */,
 				0BC6ED331451E0EF00EBBBEC /* IRActor.h in Headers */,
 				0BC6ED341451E0EF00EBBBEC /* IRContextException.h in Headers */,
 				0B015447143A2C2E0045A1FB /* IRCommandMapTestsWithNotificationType.h in Headers */,
@@ -700,6 +707,7 @@
 				0BC6ED521451E0F900EBBBEC /* IRMediator.m in Sources */,
 				0BC6ED531451E0F900EBBBEC /* IRConstants.m in Sources */,
 				0BC6ED541451E0F900EBBBEC /* IRObjectionInjectorException.m in Sources */,
+				0B27BE7B145838CD001B88A6 /* IRStoryboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
