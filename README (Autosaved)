@@ -35,7 +35,6 @@ For a quick look at framework setup take a look at AppContext in the example app
 
 The example FlickrGalleryBuilderMK2 is a simple application that allows you to search Flickr for images uisng a keyword. You can then accept or reject each of the photos returned, building a gallery of your accepted images. These galleries remain editable and are persisted using CoreData. **Please note you will need your own Flickr API key and Secret which you will need to enter into the file FlickrAPIKey.m.** Keys are available if you sign up to a free Flickr account.
 
- 
 
 ###Roadmap
 

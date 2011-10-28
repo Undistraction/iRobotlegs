@@ -12,14 +12,7 @@
 #import "NotificationNames.h"
 #import "Image.h"
 
-@interface GalleryViewController()
-    -(IBAction)previousGalleryButtonTouchUpInside:(id)sender;
-    -(IBAction)nextGalleryButtonTouchUpInside:(id)sender;
-@end
-
 @implementation GalleryViewController
-
-
 
 //------------------------------------------------------------------------------
 //  Getter / Setter

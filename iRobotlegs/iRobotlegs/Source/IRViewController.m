@@ -13,7 +13,6 @@
 #import "IRNotificationMap.h"
 
 @interface IRViewController()
-@property (nonatomic) BOOL addedContextObservers;
 @end
 
 
@@ -25,19 +24,24 @@
 
 @synthesize notificationCenter = notificationCenter_;
 @synthesize notificationMap = notificationMap_;
-@synthesize addedContextObservers = addedContextObservers_;
 
 -(IRNotificationMap *) notificationMap
 {
     if(!notificationMap_)
     {
         self.notificationMap = [[[IRNotificationMap alloc] initWithNotificationCenter: self.notificationCenter] autorelease];
-        if(!self.addedContextObservers)
-        {
-            [self addContextObservers];
-        }
     }
     return notificationMap_;
+}
+
+-(void)setNotificationCenter:(NSNotificationCenter *)notificationCenter
+{
+    [notificationCenter_ release];
+    notificationCenter_ = [notificationCenter retain];
+    if(self.notificationCenter)
+    {
+        [self addContextObservers];
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -79,7 +83,6 @@
 
 -(void)addContextObservers
 {
-    self.addedContextObservers = YES;
     //Override in subclass
 }
 
